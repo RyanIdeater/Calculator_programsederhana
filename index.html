@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kalkulator Sederhana</title>
+  </head>
+  <body>
+    <div class="popup" id="popup">
+      <span class="popup-text" id="popupText"></span>
+    </div>
+
+    <div class="wrapper">
+      <section class="screen">
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand"></div>
+        <div data-error class="error-message"></div>
+      </section>
+      <section class="calc-buttons">
+        <div class="calc-button-row">
+          <button data-all-clear class="calc-button double">C</button>
+          <button data-delete class="calc-button">&larr;</button>
+          <button data-operation class="calc-button">&divide;</button>
+        </div>
+        <div class="calc-button-row">
+          <button data-number class="calc-button">7</button>
+          <button data-number class="calc-button">8</button>
+          <button data-number class="calc-button">9</button>
+          <button data-operation class="calc-button">×</button>
+        </div>
+        <div class="calc-button-row">
+          <button data-number class="calc-button">4</button>
+          <button data-number class="calc-button">5</button>
+          <button data-number class="calc-button">6</button>
+          <button data-operation class="calc-button">-</button>
+        </div>
+        <div class="calc-button-row">
+          <button data-number class="calc-button">1</button>
+          <button data-number class="calc-button">2</button>
+          <button data-number class="calc-button">3</button>
+          <button data-operation class="calc-button">&plus;</button>
+        </div>
+        <div class="calc-button-row">
+          <button data-number class="calc-button">,</button>
+          <button data-number class="calc-button1">0</button>
+          <button data-equals class="calc-buttone">&equals;</button>
+        </div>
+      </section>
+      <div class="toggle-container">
+        <p>Dark mode</p>
+        <input type="checkbox" id="toggle" class="toggle-input" />
+        <label for="toggle" class="toggle-label">
+          <span class="toggle-text on">On</span>
+          <span class="toggle-text off">Off</span>
+        </label>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
