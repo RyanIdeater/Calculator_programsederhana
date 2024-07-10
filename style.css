@@ -305,8 +305,13 @@ body {
   color: black;
   transition: 0.3s;
 }
-
-@media only screen and (max-width: 400px) {
+@media (min-width: 375px) and (max-width: 400px) {
+  .screen .current-operand {
+    font-size: 2.2rem; /* Adjusted font size for current operand on mobile */
+  }
+}
+/* CSS for screens between 320px and 375px */
+@media (max-width: 375px) {
   .screen .current-operand {
     font-size: 1.6rem; /* Adjusted font size for current operand on mobile */
   }
