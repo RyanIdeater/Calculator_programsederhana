@@ -2,52 +2,56 @@ html {
   box-sizing: border-box;
   height: 100%;
 }
-.toggle-label {
-  display: inline-block;
-  position: relative;
-  width: 60px;
-  height: 30px;
-  background-color: #ccc;
-  border-radius: 15px;
-  cursor: pointer;
-}
 
-.toggle-text {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
-  color: #888; /* Default gray color */
-  transition: 0.3s;
-}
-
-.toggle-text.on {
-  left: 12px;
-  color: white;
-  opacity: 0;
-}
-
-.toggle-text.off {
-  right: 12px;
-  opacity: 1;
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px; /* Adjust the margin as needed */
 }
 
 .toggle-input {
   display: none;
 }
 
+.toggle-label {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-circle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.3s;
+}
+
+.toggle-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.dark-mode .toggle-text {
+  font-size: 14px;
+  color: white;
+}
+
 .toggle-input:checked + .toggle-label {
-  background-color: #4cd137; /* Toggle switch color when checked */
+  background-color: rgb(64, 255, 67);
 }
 
-.toggle-input:checked + .toggle-label .toggle-text.on {
-  opacity: 1;
-}
-
-.toggle-input:checked + .toggle-label .toggle-text.off {
-  opacity: 0;
+.toggle-input:checked + .toggle-label .toggle-circle {
+  left: 27px;
 }
 
 *::before,
@@ -72,10 +76,15 @@ body {
   text-align: left;
 }
 
+.container {
+  flex-basis: 400px;
+  display: block;
+  overflow: auto;
+}
+
 .wrapper {
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
-
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
   color: #232323;
@@ -225,8 +234,8 @@ body {
 }
 
 .calc-buttone:hover {
-  background-color: #fbfbfb;
-  color: #141414;
+  background-color: black;
+  color: white;
   transition: 0.3s;
 }
 
@@ -242,6 +251,7 @@ body {
 .dark-mode .wrapper {
   background: rgba(50, 50, 50, 0.5);
   color: #e0e0e0;
+  border: 1px solid rgb(43, 43, 43);
 }
 
 .dark-mode .screen {
@@ -288,4 +298,16 @@ body {
   flex-basis: 47%;
   color: white;
   background-color: #f64747;
+}
+
+.dark-mode .calc-buttone:hover {
+  background-color: #fbfbfb;
+  color: black;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 400px) {
+  .screen .current-operand {
+    font-size: 1.6rem; /* Adjusted font size for current operand on mobile */
+  }
 }

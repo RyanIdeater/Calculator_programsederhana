@@ -11,50 +11,51 @@
     <div class="popup" id="popup">
       <span class="popup-text" id="popupText"></span>
     </div>
-
-    <div class="wrapper">
-      <section class="screen">
-        <div data-previous-operand class="previous-operand"></div>
-        <div data-current-operand class="current-operand"></div>
-        <div data-error class="error-message"></div>
-      </section>
-      <section class="calc-buttons">
-        <div class="calc-button-row">
-          <button data-all-clear class="calc-button double">C</button>
-          <button data-delete class="calc-button">&larr;</button>
-          <button data-operation class="calc-button">&divide;</button>
-        </div>
-        <div class="calc-button-row">
-          <button data-number class="calc-button">7</button>
-          <button data-number class="calc-button">8</button>
-          <button data-number class="calc-button">9</button>
-          <button data-operation class="calc-button">×</button>
-        </div>
-        <div class="calc-button-row">
-          <button data-number class="calc-button">4</button>
-          <button data-number class="calc-button">5</button>
-          <button data-number class="calc-button">6</button>
-          <button data-operation class="calc-button">-</button>
-        </div>
-        <div class="calc-button-row">
-          <button data-number class="calc-button">1</button>
-          <button data-number class="calc-button">2</button>
-          <button data-number class="calc-button">3</button>
-          <button data-operation class="calc-button">&plus;</button>
-        </div>
-        <div class="calc-button-row">
-          <button data-number class="calc-button">,</button>
-          <button data-number class="calc-button1">0</button>
-          <button data-equals class="calc-buttone">&equals;</button>
-        </div>
-      </section>
+    <div class="container">
+      <div class="wrapper">
+        <section class="screen">
+          <div data-previous-operand class="previous-operand"></div>
+          <div data-current-operand class="current-operand"></div>
+          <div data-error class="error-message"></div>
+        </section>
+        <section class="calc-buttons">
+          <div class="calc-button-row">
+            <button data-all-clear class="calc-button double">C</button>
+            <button data-delete class="calc-button">&larr;</button>
+            <button data-operation class="calc-button">&divide;</button>
+          </div>
+          <div class="calc-button-row">
+            <button data-number class="calc-button">7</button>
+            <button data-number class="calc-button">8</button>
+            <button data-number class="calc-button">9</button>
+            <button data-operation class="calc-button">×</button>
+          </div>
+          <div class="calc-button-row">
+            <button data-number class="calc-button">4</button>
+            <button data-number class="calc-button">5</button>
+            <button data-number class="calc-button">6</button>
+            <button data-operation class="calc-button">-</button>
+          </div>
+          <div class="calc-button-row">
+            <button data-number class="calc-button">1</button>
+            <button data-number class="calc-button">2</button>
+            <button data-number class="calc-button">3</button>
+            <button data-operation class="calc-button">&plus;</button>
+          </div>
+          <div class="calc-button-row">
+            <button data-number class="calc-button">,</button>
+            <button data-number class="calc-button1">0</button>
+            <button data-equals class="calc-buttone">&equals;</button>
+          </div>
+        </section>
+      </div>
       <div class="toggle-container">
-        <p>Dark mode</p>
+        <span class="toggle-text">Light</span>
         <input type="checkbox" id="toggle" class="toggle-input" />
         <label for="toggle" class="toggle-label">
-          <span class="toggle-text on">On</span>
-          <span class="toggle-text off">Off</span>
+          <span class="toggle-circle"></span>
         </label>
+        <span class="toggle-text">Dark</span>
       </div>
     </div>
 
